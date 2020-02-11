@@ -1,0 +1,15 @@
+
+.grid {
+    border: 1px solid green;
+    flex: 0 32%;
+  height: 170px; 
+  width: 170px
+  /* background-color: blue; */
+}
+
+#container {
+    display: flex;
+  flex-wrap: wrap;
+  /* display: block;
+  float: left; */
+}

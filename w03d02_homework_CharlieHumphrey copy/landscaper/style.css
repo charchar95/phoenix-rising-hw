@@ -1,0 +1,25 @@
+body {
+    background: lightblue;
+}
+
+h1 {
+    font-family: 'Kalam', cursive;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 200px
+}
+
+h2 {
+    font-family: 'Kalam', cursive;
+    text-align: center;
+} 
+
+button {
+    padding: 30px;
+    font-family: 'Kalam', cursive;
+    text-align: center;
+    font-size: 45px;
+    background: lightgreen;
+    margin: 0 auto;
+    display: block;
+}

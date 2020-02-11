@@ -1,0 +1,162 @@
+body {
+    font-family: sans-serif;
+    margin: 5%;
+    font-weight: 200
+}
+
+.header{
+   background-color: white;
+   margin: 0;
+   padding: 0;
+   
+   
+}
+
+.header> h1, h3, span {
+    display: inline;
+    padding: 20px;
+    font-weight: 200;
+}
+
+.header > h1 {
+    color: #163EC6;
+    padding-right: 51%;  
+}
+
+.header > h3 {
+    color: lightgrey;
+}
+
+span {
+    color: black;
+}
+
+h3 {
+    color: lightgrey;
+}
+
+.blue{
+    background:#163EC6; 
+    color: white;
+    margin: auto 0;
+    padding: 7%;
+    text-align: left;
+    margin-bottom: 15px;
+    clear: both;
+    
+}
+
+.blue > h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    line-height: 20px;
+}
+
+.blue > h2 {
+    font-weight: 200;
+    line-height: 40px;
+}
+
+.top {
+    border-radius: 7px;
+    color: #163EC6;
+}
+
+.columns{
+    background: white;
+    float: left;
+    max-width: 37%;
+    text-align: center;
+    border: 1px solid lightgrey;
+    margin: 5px;
+    height: 475px;
+    padding: 1em;
+}
+
+.columns > img {
+    max-width: 290px;
+}
+
+.columns > p {
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: 25px;
+}
+
+.wrap {
+    margin: 0 auto;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.middle {
+clear: both;
+margin-top: 150px;
+margin-bottom: 200px;
+text-align: center;
+
+}
+.middle > h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+}
+
+.middle > h2 {
+    font-weight: 200;
+    color: lightgrey;
+}
+
+.you {
+    background:#163EC6;
+    color: white;
+    padding: 20px 100px 20px 100px;
+    border-radius: 7px;
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.business {
+    background: white;
+    color: #163EC6;
+    padding: 20px 80px 20px 80px;
+    border-radius: 7px;
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.footer{
+    margin: 20px;
+    float: left;
+    vertical-align: top;
+    max-width: 37%;
+    text-align: left;
+    height: 230px;
+    font-size: 14px;
+}
+
+.footer > h3 {
+    color: black;
+}
+
+.footer > p {
+    color: lightgrey;
+}
+
+.learn {
+    vertical-align: top;
+    margin: 0 auto;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    color: lightgrey;
+    padding-left: 20px;
+    padding-right: 20px; 
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
