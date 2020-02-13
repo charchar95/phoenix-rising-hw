@@ -30,12 +30,6 @@ app.get('/magic/:question', (req, res) => {
     `)
 })
 
-// Take one Down and Pass it Around //
-
-
-
-
-
 
 app.listen(port, () => {
     console.log('listening to port 3000')
