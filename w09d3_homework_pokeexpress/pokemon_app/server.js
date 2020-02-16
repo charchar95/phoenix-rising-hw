@@ -8,7 +8,7 @@ const port = 3000;
 // =======================================
 //              DATABASE
 // =======================================
-// const bakedGoods = require('./models/bakedgoods.js');
+const pokemon = require('./models/pokemon.js');
 
 
 // =======================================
@@ -17,6 +17,10 @@ const port = 3000;
   app.get('/', (request, response) => {
     response.send('Welcome to the Pokemon App');
   }); 
+
+app.get('/pokemon', (req, res) => {
+    res.send(pokemon)
+})
 
 
 // =======================================
