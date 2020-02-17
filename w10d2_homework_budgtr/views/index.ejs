@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/skeleton.css">
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <h1>How do people do this?</h1>
+        <table>
+            <% for (i=0; i < budgets.length; i++){ %>
+                <tr>
+                <td><%=budgets[i].date%></td>
+                <td><a href='#'><%=budgets[i].name%></td>
+                <td><%=budgets[i].amount%></td>
+            </tr>
+           <% } %>
+        </table>
+    </div>
+</body
+</html>

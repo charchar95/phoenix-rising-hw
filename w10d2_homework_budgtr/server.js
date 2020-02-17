@@ -13,13 +13,13 @@ const budgets = require('./models/budgets.js');
 
 // =======================================
 //              SHOW ROUTE
-// =======================================
+// ======================================= 
   app.get('/budgets', (request, response) => {
-    response.send('');
+    response.send('hello adult life');
   }); 
 
-app.get('/budgets:index', (req, res) => {
-    res.render('show.ejs', {
+app.get('/budgets/index', (req, res) => {
+    res.render('index.ejs', {
        budgets: budgets
     });
 });
