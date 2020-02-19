@@ -6,13 +6,19 @@ const app = express();
 const port = 3000;
 
 // =======================================
-//              DATABASE
+//              MIDDLEWARE
 // =======================================
+app.use(express.urlencoded({extended:false}));
+app.use(express.json())
+app.use(express.static('public')); 
+
+// =======================================
+//              DATABASE   
+// ======================================= 
 const budgets = require('./models/budgets.js');
 
-
 // =======================================
-//              SHOW ROUTE
+//              ROUTES
 // ======================================= 
 app.get('/budgets/', (req, res) => {
     res.render('index.ejs', {
@@ -20,29 +26,31 @@ app.get('/budgets/', (req, res) => {
     });
 });
 
-app.get('/budgets/:index', (req, res) => {
+app.get('/budgets/new', (req, res) => {
+    res.render('new.ejs');
+  }); 
+
+app.get('/budgets/:id', (req, res) => {
     res.render('show.ejs', {
-       budgets: budgets[req.params.index]
+       budgets: budgets[req.params.id]
     });
 });
 
-app.get('/budgets/new:', (req, res) => {
-    res.render('show.ejs', {
-        
-    });
-  }); 
+
 
 app.post('/budgets', (request, response) => {
     console.log('body', request.body)
-    // let fruit = {}
-    // fruit.name = request.body.name
-    // fruit.color = request.body.color
-    // fruit.readyToEat = request.body.readyToEat
-    // fruits.push(fruit)
-    // console.log('fruits', fruits)
-    // response.send('data received')
-    // res.redirect('/fruits');
+    let budget = {}
+    budget.date = request.body.date
+    budget.name = request.body.name
+    budget.from = request.body.from
+    budget.amount = request.body.amount
+    budget.tags = request.body.tags
+    budgets.push(budget)
+    console.log('budgets', budgets)
+    response.redirect('/budgets/');
 })
+
 
 
 

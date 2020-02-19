@@ -10,14 +10,20 @@
 </head>
 <body>
     <div class="container">
-        <h1>How do people do this?</h1>
+        <h1>What did I do with my money?</h1>
+        <div class="container">
+            <%let bankAccount = 0%>
+            <p> Bank Account Total: <%=bankAccount%></p>
+        </div>
         <table>
             <% for (i=0; i < budgets.length; i++){ %>
-                <tr>
-                <td><%=budgets[i].date%></td>
-                <td><a href='#'><%=budgets[i].name%></td>
-                <td><%=budgets[i].amount%></td>
-            </tr>
+                <%=bankAccount += (budgets[i]).amount%>
+                <tr>   
+                    <td><%=budgets[i].date%></td>
+                    <td><a href='/budgets/<%=i%>'%>><%=budgets[i].name%></td>
+                    <td><%=budgets[i].amount%></td>
+                    
+                </tr>
            <% } %>
         </table>
     </div>
