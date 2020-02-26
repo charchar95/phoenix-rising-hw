@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style type ="text/css">
+  .form {
+  width:300px;
+}
+
+input{
+  width:150px;
+  margin-bottom:10px;
+}
+
+p {
+  cursor: crosshair;
+}
+  </style>
+</head>
+<body>
+  <h1>Make A New Pokemon!</h1>
+  <div class ="form">
+  <form action="/pokemon/" method="POST">
+    
+    Name: <input type="text" name="name" value="<%=pokemon.name%>"> </br>
+    ID: <input type="text" name="id" value="<%=pokemon.id%>"> </br>
+    Type: <input type="text" name="type" value="<%=pokemon.type%>"> </br>
+    HP: <input type="text" name="hp" value="<%=pokemon.hp%>"> </br>
+    Attack: <input type="text" name="attack" value="<%=pokemon.attack%>"> </br>
+    Defense: <input type="text" name="defense" value="<%=pokemon.defense%>"> </br>
+    Speed: <input type="text" name="speed" value="<%=pokemon.speed%>"> </br>
+    <input type="submit" name="" value="Submit Changes"></br>
+  </form>
+</div>
+  <p href="/pokemon">Back to Pokedex</a></p>
+</body>
+</html>
