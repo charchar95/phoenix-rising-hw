@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
-        <h1>New Fruit page</h1>
-        <form action="/fruits" method="POST">
-            Name: <input type="text" name="name" /><br/>
-            Color: <input type="text" name="color" /><br/>
-            Is Ready To Eat: <input type="checkbox" name="readyToEat" /><br/>
-            <input type="submit" name="" value="Create Fruit"/>
-        </form>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Product</title>
+</head>
+<body>
+    <h1>Edit a Product?</h1>
+   <div class="form">
+  <form action="/products/" method="POST"> 
+    Name: <input type="text" name="name"> </br>
+    Description: <input type="text" name="description"> </br>
+    Image: <input type="text" name="img"> </br>
+    Price: <input type="number" name="price"> </br>
+    Stock: <input type="number" name="qty"> </br>
+    <input type="submit" value="Submit Changes"></br>
+  </form>
+</div>
+
+  <a href="/products">Back to Shop Page</a></p>
+</body>
 </html>

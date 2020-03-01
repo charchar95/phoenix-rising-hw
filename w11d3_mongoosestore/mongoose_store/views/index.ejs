@@ -6,25 +6,20 @@
   <title></title>
 </head>
 
-<body>
-  <h1>Fruits index page</h1>
-  <ul>
-    <% for(let i = 0; i < fruits.length; i++){ %>
-    <li>
-      The <a href="/fruits/<%=fruits[i].id %>">
-        <%=fruits[i].name; %>
-      </a> is <%=fruits[i].color; %>.
-      <% if(fruits[i].readyToEat === true){ %>
-      It is ready to eat
-      <% } else { %>
-      It is not ready to eat
-      <% } %>
-    </li>
-    <% } %>
-  </ul>
+<body> 
+  <div class="shop-page"></div>
+  <h1>Shopping!</h1>
+  <% for (i=0; i < Product.length; i++) { %>
+  <h2> <%= Product[i].name %></h2>
+  <img src="<%=Product[i].img%>">
+  <p><%=Product[i].description%></p>
+  </div>
+  <% } %>
+    
+  
 
         <nav>
-            <a href="/fruits/new">Create a New Fruit</a>
+            <a href="/products/new">Create a New Product</a>
         </nav>
     </body>
 </html>
