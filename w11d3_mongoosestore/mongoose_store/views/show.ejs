@@ -3,26 +3,32 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../public/style.css"/>
+  <%- include ('./partials/header.ejs') %>
   <title>Show Page</title>
 </head>
 
 <body>
-    <div class="container">
-  <h1> <%=product.name;</h1>
-    <%=product.img%>  
-    <p><%=product.description%></p>
-    <% if (product.qty > 1) {
-    <h2>Stock: <%=product.qty%></h2>
-     <div class="button"> 
-      Buy!
-    </div>
-    } else {
+    <div class="show">
+  <h1> <%=Product.name %></h1>
+   <img src= <%=Product.img%>>  
+    <p><%=Product.description%></p>
+    <% if (Product.qty > 1) { %>
+    <h2>Stock: <%=Product.qty%></h2>
+<a href="/products/<%=Product.id%>/edit">Edit this Product</a>
+    <form action="/products/<%= Product.id%>/buy?_method=PUT" method="POST">
+      <input id="buy" type="submit" value="buy">
+    </form>
+
+    <% } else { %>
       <h2>Out of Stock!</h2>
-    }
-    <a href="/products/:id/edit">Edit this Product</a>
-  <form action="/products/<%=products.id%>?_method=DELETE" method="POST">
+  
+  <form action="/products/<%=Product.id%>?_method=DELETE" method="POST">
     <input type="submit" value="Delete!">
     </form>
+
+   <% } %>
+  
 </div> 
  <a href="/products">Back to Shop Page</a>
 </body>

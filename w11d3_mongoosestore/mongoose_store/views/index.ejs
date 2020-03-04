@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+  <link rel="stylesheet" type="text/css" href="../public/style.css"/>
   <meta charset="utf-8">
+  <%- include ('./partials/header.ejs') %>
   <title></title>
 </head>
 
 <body> 
-  <div class="shop-page"></div>
-  <h1>Shopping!</h1>
-  <% for (i=0; i < Product.length; i++) { %>
-  <h2> <%= Product[i].name %></h2>
-  <img src="<%=Product[i].img%>">
-  <p><%=Product[i].description%></p>
-  </div>
-  <% } %>
-    
+    <h1>List of Materials</h1>
+    <nav>
+        <a href="/products/new">Create a New Product</a>
+    </nav>
+  <div class="container">
+    <% for (i=0; i < Product.length; i++) { %>
+      <div class="item">
+        <div class="name">
+      <img src="<%=Product[i].img%>">
+      <h3> <%= Product[i].name %></h3>
+    </div>
+      <p><%=Product[i].description%><br><a href="/products/<%=Product[i].id%>">Learn More</a></p>
   
+  </div>
 
-        <nav>
-            <a href="/products/new">Create a New Product</a>
-        </nav>
+  <% } %>
+</div>    
+  
     </body>
 </html>

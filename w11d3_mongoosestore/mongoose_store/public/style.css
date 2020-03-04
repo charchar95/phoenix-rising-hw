@@ -1,0 +1,81 @@
+Body {
+  background: rgb(23,69,110);
+  margin: auto ;
+}
+
+* {
+  /* border: 1px solid black; */
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+  width: 40;
+  height: 40;
+}
+
+h3{
+ color: #F4F26C ;
+}
+
+.item {
+  display: flex;
+  align-content: space-between;
+  border: 1px solid black;
+  padding-top: 5%;
+  background-color: rgb(22,61,95);
+  
+  
+}
+
+.container {
+  display: flex;
+  margin:0 15% 0 15%; 
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.name {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  min-height: 140px;
+  min-width: 140px;
+  max-height: 140px;
+  max-width: 140px;
+}
+
+.name > img {
+  height: 40px;
+  width: 40px;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 20%
+}
+
+a {
+  color: rgb(38,174,35);
+}
+
+.show > img {
+  height: 40px;
+  width: 40px;
+  padding-left: 20%;
+  padding-right: 20%;
+
+}
+
+.show {
+  display: flex;
+  margin:0 15% 0 15%; 
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+submit {
+  background-color: #F4F26C ;
+  color: black;
+}
