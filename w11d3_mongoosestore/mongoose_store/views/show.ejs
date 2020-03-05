@@ -15,20 +15,18 @@
     <p><%=Product.description%></p>
     <% if (Product.qty > 1) { %>
     <h2>Stock: <%=Product.qty%></h2>
+    <h2>Price: <%=Product.price%></h2>
 <a href="/products/<%=Product.id%>/edit">Edit this Product</a>
     <form action="/products/<%= Product.id%>/buy?_method=PUT" method="POST">
-      <input id="buy" type="submit" value="buy">
+      <input id="buy" type="submit" value="BUY">
     </form>
 
     <% } else { %>
       <h2>Out of Stock!</h2>
-  
-  <form action="/products/<%=Product.id%>?_method=DELETE" method="POST">
-    <input type="submit" value="Delete!">
-    </form>
-
    <% } %>
-  
+  <form action="/products/<%=Product.id%>?_method=DELETE" method="POST">
+    <input type="submit" value="DELETE">
+    </form>
 </div> 
  <a href="/products">Back to Shop Page</a>
 </body>

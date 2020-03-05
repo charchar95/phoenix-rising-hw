@@ -83,7 +83,7 @@ app.get('/products/:id/edit', (req, res)=>{
 
 
 // UPDATE //
-app.put("/products/:id", (req, res) => {
+router.put("/products/:id", (req, res) => {
     // res.send(req.body)
     Product.findByIdAndUpdate(
       req.params.id,
@@ -97,7 +97,8 @@ app.put("/products/:id", (req, res) => {
 
 
 // DELETE //  
-router.delete("/:id", (req, res) => {
+// route not working
+router.delete("products/:id", (req, res) => {
     // res.send('deleting...')
     Product.findByIdAndRemove(req.params.id, (err, data) => {
       res.redirect("/products");
@@ -136,13 +137,14 @@ router.delete("/:id", (req, res) => {
 
 
 // BUY //
-router.put("/:id/buy", (req, res) => {
-  Product.findById(req.params.id, (err, Product) => {
+// route not working //
+router.put("products/:id/buy", (req, res) => {
+  Product.findById(req.params.id, (err, product) => {
+    Product.findByIdAndUpdate(req.params.id, product, (err, updatedModel) => {
       Product.qty -= 1;
-      Product.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel) => {
-        res.redirect(`/products`);
-      })
-  })
+      res.redirect(`/products/${req.params.id}`);
+    })
+    })
 });
 
 // =======================================
