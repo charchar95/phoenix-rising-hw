@@ -97,7 +97,6 @@ class Receipt extends React.Component {
 
     render () {
         return (
-            
         <div className="box">
             <h1>{this.props.receipt.person}</h1>
             <h3>Main: {this.props.receipt.order.main}</h3>

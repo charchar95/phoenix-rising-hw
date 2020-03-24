@@ -2,14 +2,11 @@
     width: 80%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .box {
     border: green 1px solid;
     padding: 20px;
-}
-
-.app {
-    display: flex; 
-    flex-wrap: wrap;
+    margin: 15px;
 }
