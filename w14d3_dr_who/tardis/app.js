@@ -1,68 +1,75 @@
-class DivThree extends React.Component {
-state = {
-    tardis: {
-        name: 'Time and Relative Dimension in Space',
-        caps: false,
+class DivOne extends React.Component {
+    render () {
+        return (
+            <div> 
+               <DivTwo 
+               tardis={this.props.tardis}
+               handleChange={this.props.handleChange}
+                />
+            </div>
+        )
     }
-} 
-
-changeIt = (text) => {
-    console.log("clicked")
-    if (this.state.tardis.caps) {
-        this.setState({
-            tardis: {
-                name: text.toLowerCase(),
-                caps: false
-            }
-        })
-    } else {
-        this.setState({
-            tardis: {
-                name: text.toUpperCase(), 
-                caps: true
-            }
-        })
-    }
-}
-render () {
-    return (
-        <div className ="div-three" 
-            // handleChange={this.changeIt}
-            text={this.state.tardis.name}> 
-        <h3 onClick={() => changeIt(this.state.text)}>
-        {this.state.tardis.name}</h3>
-        </div>
-    )
-}
 }
 
 class DivTwo extends React.Component {
     render () {
         return (
-            <div className ="div-two" >
-            <DivThree />
-            <DivThree />
+            <div> 
+            <DivThree 
+                tardis={this.props.tardis}
+                handleChange={this.props.handleChange}/>
+            <DivThree 
+            tardis={this.props.tardis}
+            handleChange={this.props.handleChange}/>
             </div>
         )
     }
 }
 
-
-class DivOne extends React.Component {
-    render () {
-        return (
-            <div className ="div-one" >
-               <DivTwo />
-            </div>
-        )
-    }
+class DivThree extends React.Component {
+render () {
+    return (
+        <div> 
+            <h3 onClick={() => this.props.handleChange(this.props.tardis.name)}>{this.props.tardis.name}</h3>
+        </div>
+    )
 }
+}
+
+
 
 class App extends React.Component {
+    state = {
+        tardis: {
+            name: 'Time and Relative Dimension in Space',
+            caps: false,
+        }
+    } 
+    
+    changeIt = (text) => {
+        console.log('click')
+        if(this.state.tardis.caps) {
+            this.setState({
+                tardis:{
+                name: text.toLowerCase(),
+                caps: false
+                }
+            });
+        } else {
+            this.setState({
+                tardis: {
+                    name: text.toUpperCase(),
+                    caps: true
+                }
+            });
+        }
+    }
     render () {
         return (
-            <div>
-                <DivOne  />
+            <div> 
+                <DivOne  
+                tardis={this.state.tardis}
+                handleChange={this.changeIt} />
             </div>
             )
         }
