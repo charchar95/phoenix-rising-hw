@@ -125,3 +125,13 @@ def print_item_sums hash1, hash2
 end
 
 print_item_sums table, lamp
+
+## Euler Problem 1 ##
+total = 0
+1000.times do |num|
+    if num % 3 === 0 || num % 5 === 0
+        total += 1
+    end 
+end
+p total
+
