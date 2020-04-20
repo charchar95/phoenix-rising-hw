@@ -1,4 +1,4 @@
-# Hello World
+## Hello World ##
 # 1. Print "Hello World" to the console
 puts "Hello World"
 
@@ -10,7 +10,7 @@ p "Hello World #{adjective}"
 var = "Hello World"
 p var.upcase
 
-# Nums Array and Enumerables
+## Nums Array and Enumerables ##
 nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0, 35, 19, 66, 3, 22, 21, 4, 4, 4, 0, 1, 2, 3, 4, 12, 15]
 # 1. Use .uniq to print the array with all duplicate entries removed
 p nums.uniq
@@ -65,3 +65,15 @@ p nums.reject {|num| num % 3 === 0}
 
 # 16. use .select to return all the numbers divisible by 5
 p nums.select {|num| num % 5 === 0}
+
+## Color Array ##
+colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+
+# 1. Print out a random color.
+p colors.sample
+
+# 2. Print out the colors array in reverse order.
+p colors.reverse
+
+# 3. Print out all of the colors in the array with all capital letters.
+colors.each {|color| p color.capitalize}
