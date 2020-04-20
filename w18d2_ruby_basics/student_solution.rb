@@ -77,3 +77,16 @@ p colors.reverse
 
 # 3. Print out all of the colors in the array with all capital letters.
 colors.each {|color| p color.capitalize}
+
+## Methods ##
+def find_area height, width
+    height * width
+end
+
+p find_area 2, 3
+
+def multiply_each_by_five
+    nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
+    nums.each {|num| p num * 5}
+end 
+multiply_each_by_five
