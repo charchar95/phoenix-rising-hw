@@ -90,3 +90,38 @@ def multiply_each_by_five
     nums.each {|num| p num * 5}
 end 
 multiply_each_by_five
+
+
+## Methods With a Hash ##
+book = {
+  title: 'The Great Gatsby',
+  author: 'F Scott Fitzgerald',
+  year: 1925,
+  price: 10
+}
+
+lamp = {
+  type: 'reading',
+  brand: 'Ikea',
+  price: 25
+}
+
+table = {
+  type: 'bed side',
+  brand: 'Crate & Barrel',
+  color: 'birch',
+  price: 50
+}
+
+
+def print_price arr
+    p arr[:price]
+end
+
+print_price table
+
+def print_item_sums hash1, hash2
+   p hash1[:price] + hash2[:price]
+end
+
+print_item_sums table, lamp
