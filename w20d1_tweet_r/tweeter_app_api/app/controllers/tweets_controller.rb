@@ -18,6 +18,17 @@ class TweetsController < ApplicationController
         end
     end
 
+    def update
+        tweet = Tweet.find(params[:id])
+        tweet.update(tweet_params)
+        render(json: {tweet: tweet})
+    end
+
+    def destroy
+        tweet = Tweet.destroy(params[:id])
+        render(status: 204)
+      end
+
     private
     def tweet_params
         # Returns a sanitized hash of the params with nothing extra
