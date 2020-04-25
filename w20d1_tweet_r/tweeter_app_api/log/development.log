@@ -103,3 +103,18 @@ Processing by TweetsController#update as */*
 Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 2782)
 
 
+Started DELETE "/tweets/1" for ::1 at 2020-04-25 12:11:31 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TweetsController#destroy as */*
+  Parameters: {"tweet"=>{"title"=>"How does this work", "content"=>"my first tweet", "author"=>"char"}, "id"=>"1"}
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:28:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:28:in `destroy'
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/tweets_controller.rb:28:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:28:in `destroy'
+Completed 204 No Content in 16ms (Views: 0.1ms | ActiveRecord: 7.4ms | Allocations: 5833)
+
+
