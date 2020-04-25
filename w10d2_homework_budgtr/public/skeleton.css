@@ -26,6 +26,11 @@
 */
 
 
+.bankBalanceClass {
+  border: green
+}
+
+
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {

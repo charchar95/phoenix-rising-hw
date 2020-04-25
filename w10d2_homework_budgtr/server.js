@@ -4,6 +4,12 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+var jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const { window } = new JSDOM();
+const { document } = (new JSDOM('')).window;
+global.document = document;
+var $ = require("jquery")(window);
 
 // =======================================
 //              MIDDLEWARE
@@ -45,6 +51,7 @@ app.post('/budgets', (request, response) => {
     budget.name = request.body.name
     budget.from = request.body.from
     budget.amount = request.body.amount
+    bankAccount =+ budget.amount
     budget.tags = request.body.tags
     budgets.push(budget)
     console.log('budgets', budgets)

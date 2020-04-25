@@ -11,13 +11,25 @@
 <body>
     <div class="container">
         <h1>What did I do with my money?</h1>
-        <div class="container">
-            <%let bankAccount = 0%>
-            <p> Bank Account Total: <%=bankAccount%></p>
+        <%let bankAccount = 0%>
+        <script>
+            const $body = $('body')  
+              for (let i=0; i < budgets.length; i++) {  
+                    bankAccount += (budgets[i].amount);  
+            }
+    
+        
+             if (bankAccount < 0) {
+                 $body.css('background-color', 'red');   
+             } else if (bankAccount > 1000) {
+                $body.css('background-color', 'blue');
+             }
+            
+             </script>
+            Bank Account Total: $<%=bankAccount%>
         </div>
         <table>
             <% for (i=0; i < budgets.length; i++){ %>
-                <%=bankAccount += (budgets[i]).amount%>
                 <tr>   
                     <td><%=budgets[i].date%></td>
                     <td><a href='/budgets/<%=i%>'%>><%=budgets[i].name%></td>

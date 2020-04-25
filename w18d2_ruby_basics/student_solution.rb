@@ -135,3 +135,7 @@ total = 0
 end
 p total
 
+## Primes ##
+def check_prime num
+    num % num === 
+end
