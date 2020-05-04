@@ -1,10 +1,16 @@
 import React, {Component} from 'react';
 
 class Daters extends Component {
-    getDater () {
-        fetch('http://localhost:3000/daters')
-        .then( daters => console.log(daters))
+    componentDidMount() {
+        this.getDaters()
     }
+    getDaters() {
+        fetch('/users')
+        .then(response => response.json())
+        .then(json => console.log(json))
+        .catch(err => console.log(err))
+    }
+
     render () {
         return (
             <h1>Hello Dating World</h1>
