@@ -6,7 +6,20 @@ class App extends Component {
   render () {
     return (
       <div className="App"> 
-        <Daters />
+        <div className="header">
+          <h1>Hello Dating World</h1>
+        </div>
+        <div className="container">
+          <div className="left-column">
+            <Daters />
+          </div>
+        <div className="center-column">
+
+        </div>
+        <div className="right-column">
+          <Daters />
+        </div>
+        </div>
       </div>
     )
   }

@@ -1,11 +1,33 @@
-.App {
-  text-align: center;
+.container{
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.right-columnm .left-column{
+  flex: 0 0 12em;
 }
+
+.right-column{
+  order: -1;
+}
+
+.left-column{
+
+}
+
+.center-column{
+
+}
+
+
+.App {
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
